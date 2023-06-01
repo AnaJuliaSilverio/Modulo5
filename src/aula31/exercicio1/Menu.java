@@ -28,12 +28,15 @@ public class Menu {
         }
     }
 
+
     public void adicionar(String tipo,String nome,int quantidade){
         carrinho.add(new Alimento(tipo,nome,quantidade));
-
     }
     public void adicionar(String tipo,String nome,double grama){
         carrinho.add(new Alimento(tipo,nome,grama));
+    }
+    public void adicionar(Alimento alimentoPronto){
+        carrinho.add(alimentoPronto);
     }
 
     //regra de negocio
@@ -69,31 +72,19 @@ public class Menu {
     }
 
     public void mostrarCarrinho() {
-       alimento.getListaSeparada(carrinho);
+       alimento.setListaSeparada(carrinho);
         System.out.println("-----------VERDURA-------------");
-        for (Alimento alimento : alimento.getVerduras()) {
-                System.out.println("Tipo: "+alimento.getTipoAlimento());
-                System.out.println("Nome: " + alimento.getNomeAlimento());
-                System.out.println("Quantidade: " + alimento.getValorDecimal());
-        }
+        alimento.mostrarInfoAlimentoDecimal(alimento.getVerduras());
+
         System.out.println("-----------LEGUMES-------------");
-        for (Alimento alimento : alimento.getLegumes()){
-                System.out.println("Tipo: "+alimento.getTipoAlimento());
-                System.out.println("Nome: " + alimento.getNomeAlimento());
-                System.out.println("Quantidade: " + alimento.getValorInteiro());
-            }
+        alimento.mostrarInfoAlimentoInteiro(alimento.getLegumes());
+
         System.out.println("-----------GRÃOS-------------");
-        for (Alimento alimento : alimento.getGraos()){
-                System.out.println("Tipo: "+alimento.getTipoAlimento());
-                System.out.println("Nome: " + alimento.getNomeAlimento());
-                System.out.println("Quantidade: " + alimento.getValorDecimal());
-            }
+        alimento.mostrarInfoAlimentoDecimal(alimento.getGraos());
+
         System.out.println("-----------OUTROS-------------");
-        for (Alimento alimento : alimento.getOutros()){
-                System.out.println("Tipo: "+alimento.getTipoAlimento());
-                System.out.println("Nome: " + alimento.getNomeAlimento());
-                System.out.println("Quantidade: " + alimento.getValorInteiro());
-            }
+        alimento.mostrarInfoAlimentoInteiro(alimento.getOutros());
+
         System.out.println();
         System.out.println("Quantidade de verduras: "+alimento.getVerduras().size());
         System.out.println("Quantidade de legumes: "+alimento.getLegumes().size());
