@@ -58,13 +58,13 @@ public class Menu {
 
     public int verificaQuantidadeInt(String quantidade){
 
-        if (quantidade.contains(".")||!quantidade.matches("[0-9]+")){
+        if (!quantidade.matches("[0-9]+")){
             throw new NumberFormatException("Para "+tipo+" ,a quantidade deve ser informada em unidades inteiras");
         }
         return Integer.parseInt(quantidade);
     }
     public double verificaQuantidade(String quantidade) {
-        if (!quantidade.contains(".")){
+        if (!quantidade.matches("[0-9.]+")){
             throw new NumberFormatException("Para " + tipo + " ,a quantidade deve ser informada com ponto");
         }
         return Double.parseDouble(quantidade);
