@@ -1,4 +1,4 @@
-package exercicio2;
+package aula31.exercicio2;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
