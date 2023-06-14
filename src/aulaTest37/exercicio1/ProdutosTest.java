@@ -9,6 +9,6 @@ public class ProdutosTest {
     @DisplayName("Deve retornar o preço de menor valor entre os produtos")
     void vendeProdutoMaisBarato(){
         Produtos produtos = new Produtos();
-        Assertions.assertEquals(10,produtos.vender());
+        Assertions.assertEquals(10,produtos.vender().getPreco());
     }
 }
