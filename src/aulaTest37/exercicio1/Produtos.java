@@ -1,7 +1,6 @@
-package exercicio1;
+package aulaTest37.exercicio1;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.List;
 
 public class Produtos {

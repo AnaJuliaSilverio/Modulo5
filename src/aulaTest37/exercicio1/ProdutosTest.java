@@ -1,4 +1,4 @@
-package exercicio1;
+package aulaTest37.exercicio1;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
